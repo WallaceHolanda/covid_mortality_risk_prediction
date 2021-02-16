@@ -3,7 +3,7 @@
 ### 🔎 Technologies Used
  <ul>
   <a href="https://www.python.org/t"><li>Python</li></a>
-  <a href="https://jupyter.org/"><li>Jupyter Notebookr</li></a>
+  <a href="https://jupyter.org/"><li>Jupyter Notebook</li></a>
  </ul>
   
 ---
