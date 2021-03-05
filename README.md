@@ -27,5 +27,20 @@
 ### 🎯 Objectives
 
 
+---
+
+### Endpoints
+
+0. /doctor - Método POST (Web)
+    <p>Realiza cadastro de um médico, passando todos os dados e cadastrando nas tabelas, user, person e doctor</p>
+    
+1. /doctor/:id - Método PUT (Web)
+    <p>Atualiza os dados de um médico (Exceto a senha), passando todos os dados e cadastrando nas tabelas, user, person e doctor</p>
+    
+2. /doctor/:id - Método DELETE (Web)
+    <p>Apaga todos os dados de um médico, nas tabelas, user, person e doctor</p>
+
+---
+
 
 Developed by Wallace Duarte de Holanda
