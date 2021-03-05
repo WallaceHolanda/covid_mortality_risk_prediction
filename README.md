@@ -31,11 +31,11 @@
 
 ### Endpoints
 
-1. /text - Get Method
-    <p>Verifica se a conexão foi estabelecida com sucesso.</p>
+1. /test - Get Method
+<br> Verifica se a conexão foi estabelecida com sucesso.
     
 2. /predict - Post Method
-    <p>Realiza a predição da possibilidade de agravamento do paciente, tendo em vista seus dados clínicos.</p>
+<br>Realiza a predição da possibilidade de agravamento do paciente, tendo em vista seus dados clínicos.
     
 ---
 
