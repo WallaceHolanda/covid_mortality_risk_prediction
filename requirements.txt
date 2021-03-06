@@ -1,0 +1,12 @@
+Flask==1.1.1
+flask-restplus==0.13.0
+itsdangerous==1.1.0
+Jinja2==2.11.1
+MarkupSafe==1.1.1
+matplotlib==3.2.1
+numpy==1.18.2
+python-dateutil==2.8.1
+requests==2.23.0
+scikit-learn==0.22.2.post1
+urllib3==1.25.8
+Werkzeug==0.16.1

@@ -13,7 +13,7 @@ with open("./notebook/model.pickle","rb") as f:
     meu_modelo = pickle.load(f)
 
 # definimos aqui uma rota, no caso criamos a rota localhost:5000/
-@app.route("/")
+@app.route("/test")
 def primeiro_endpoint_get():
   return ("Tudo Funcionando Corretamente !", 200) 
 
