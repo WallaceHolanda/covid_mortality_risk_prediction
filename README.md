@@ -40,4 +40,4 @@
 ---
 
 
-Developed by Wallace Duarte de Holanda
+Developed by Wallace Holanda
