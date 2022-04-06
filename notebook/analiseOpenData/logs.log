@@ -28130,3 +28130,6 @@
                        random_state=2576, splitter='best'), GaussianNB(priors=None, var_smoothing=1e-09), DummyClassifier(constant=None, random_state=2576, strategy='prior'), QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
                               store_covariance=False, tol=0.0001)]
 2022-03-18 13:43:24,636:INFO:compare_models() succesfully completed......................................
+2022-04-01 13:30:57,642:INFO:Initializing plot_model()
+2022-04-01 13:30:57,648:INFO:plot_model(fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=LogisticRegression(max_iter=1000, random_state=2576), feature_name=None, fit_kwargs=None, groups=None, label=False, plot=auc, plot_kwargs=None, save=False, scale=1, system=True)
+2022-04-01 13:30:57,648:INFO:Checking exceptions
