@@ -1,0 +1,17 @@
+* pyCaretModelo.ipynb - Contém um exemplo de utilização da biblioteca pyCaret, que permite preparar os dados e otimizar o teste de algoritmos de aprendizado de máquinas
+
+
+* preprocessamentofuncoes.ipynb - Contém as funções utilizadas no pré-processamento
+
+
+* preprocessamentoDados.ipynb - Exemplo da utilização das funções de pré-processamento
+
+
+* modelofuncoes.ipynb - Funções utilizadas para automatizar a criação e avaliação dos modelos
+
+
+* analisandoModelos.ipynb - Exemplo da utilização das funções de criação e avaliação dos modelos
+
+
+
+
