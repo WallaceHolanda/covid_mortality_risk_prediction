@@ -1,17 +1,23 @@
-* pyCaretModelo.ipynb - Contém um exemplo de utilização da biblioteca pyCaret, que permite preparar os dados e otimizar o teste de algoritmos de aprendizado de máquinas
+* analisandoModelos.ipynb 
+- Exemplo da utilização das funções de criação e avaliação dos modelos
 
+* avaliacaoDoModeloFinal.ipynb
+- Validação do modelo selecionado com as demais bases
 
-* preprocessamentofuncoes.ipynb - Contém as funções utilizadas no pré-processamento
+* preprocessamentofuncoes.ipynb 
+- Contém as funções utilizadas no pré-processamento
 
+* preprocessamentoDados.ipynb 
+- Exemplo da utilização das funções de pré-processamento
 
-* preprocessamentoDados.ipynb - Exemplo da utilização das funções de pré-processamento
+* modelofuncoes.ipynb 
+- Funções utilizadas para automatizar a criação e avaliação dos modelos
 
+* modelosCurvaRoc.ipynb
+- Exibe a cruva Roc dos modelos utilizados
 
-* modelofuncoes.ipynb - Funções utilizadas para automatizar a criação e avaliação dos modelos
+* pyCaretModelo.ipynb 
+- Contém um exemplo de utilização da biblioteca pyCaret
 
-
-* analisandoModelos.ipynb - Exemplo da utilização das funções de criação e avaliação dos modelos
-
-
-
-
+* VisualizandoDados.ipynb
+- Geração de um relatório dos dados por meio da biblioteca pandas_profiling
