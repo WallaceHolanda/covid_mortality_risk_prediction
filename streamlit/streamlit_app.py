@@ -143,5 +143,6 @@ if(os.path.exists('modeloOC.pk1')):
         # dadosFormatados = np.array([[dados]])
         dadosFormatados = pd.DataFrame([dados])
         resultado = modelo.predict_proba(dadosFormatados)
-        st.write('Probabilidade de Agravamento: ', resultado[0])
+        probAgravamento =  round(resultado[0][0] * 100, 3)
+        st.write('Probabilidade de Agravamento: ', probAgravamento, ' %')
         # st.write('Dados: ', dadosFormatados)
