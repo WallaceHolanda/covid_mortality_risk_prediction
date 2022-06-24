@@ -1,3 +1,5 @@
 # Ignorando o arquivo contendo a descrição dos campos da base de dados
 Ficha_Base.pdf
 descricao_database.txt
+predict_covid_risk
+notebook/analiseOpenData/PreProcessamento*
