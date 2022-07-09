@@ -1,6 +1,21 @@
 # Covid Mortality Risk Prediction
 
-### 🔎 Technologies Used
+---
+  
+### 💻 About the Project
+<ul>
+ <li>Este projeto está direcionado no desenvolvimento de um modelo de predição da probabilidade de agravamento do quadro clínico de pacientes diagnosticados com a COVID-19.</li>
+ <li>O presente modelo utiliza dados de pacientes brasileiros, coleatados da plataforma de dados abertos OpenDataSus.</li>
+</ul>
+
+---
+
+### 🎯 Objetivos
+
+
+---
+
+### 🔎 Tecnologias Utilizadas
  <ul>
   <a href="https://www.python.org/t"><li>Python</li></a>
   <a href="https://jupyter.org/"><li>Jupyter Notebook</li></a>
@@ -9,7 +24,7 @@
   
 ---
 
-### 📚 Library Used
+### 📚 Bibliotecas Utilizadas
  <ul>
   <a href="https://pandas.pydata.org/"><li>Pandas</li></a>
   <a href="https://scikit-learn.org/stable/"><li>Scikit-learn</li></a>
@@ -17,15 +32,6 @@
  
  </ul>
  
----
-  
-### 💻 About the Project
- This project is about development of a predictive model aimed at predicting the risk of worsening patients with Covid-19.
-
----
-
-### 🎯 Objectives
-
 
 ---
 
