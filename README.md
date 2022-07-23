@@ -9,21 +9,23 @@
 ---
 
 ### 🎯 Objetivos
+<ul>
  <li>Coletar, analisar e organizar os dados obtidos através do OpenDataSus;</li>
  <li>Avaliar o desempenho dos algoritmos de aprendizado de máquina em relação aos dados;</li>
  <li>Desenvolver um modelo de agravamento do estado clínico com base na probabilidade de internação;</li>
  <li>Desenvolver um modelo de agravamento do estado clínico com base na probabilidade de mortalidade;</li>
  <li>Disponibiliar o modelo desenvolvido.</li>
+</ul>
 
 ---
 
 ### 🔎 Tecnologias Utilizadas
- <ul>
+<ul>
   <a href="https://www.python.org/t"><li>Python</li></a>
   <a href="https://jupyter.org/"><li>Jupyter Notebook</li></a>
   <a href="https://flask.palletsprojects.com/en/1.1.x/"><li>Flask</li></a>
- </ul>
-  
+</ul>
+
 ---
 
 ### 📚 Bibliotecas Utilizadas
