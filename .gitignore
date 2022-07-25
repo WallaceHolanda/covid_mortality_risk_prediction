@@ -2,8 +2,9 @@
 Ficha_Base.pdf
 descricao_database.txt
 predict_covid_risk
-notebook/analiseOpenData/PreProcessamento*
 docs*
 streamlit*
 .ipynb_checkpoints*
 database*
+notebook/Mossoro*
+notebook/OpenDataSus/PreProcessamento*
