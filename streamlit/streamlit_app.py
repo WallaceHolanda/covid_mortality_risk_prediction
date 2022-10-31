@@ -117,8 +117,8 @@ dorDeCabeca = radio_values.get(dorDeCabeca_value)
 diabetes_value = st.radio('Possui Diabetes?', options=radio_options)
 diabetes = radio_values.get(diabetes_value)
 
-# cardiaca_value = st.radio('Possui Problema Cardíaco?', options=radio_options)
-# cardiaca = radio_values.get(cardiaca_value)
+cardiaca_value = st.radio('Possui Problema Cardíaco?', options=radio_options)
+cardiaca = radio_values.get(cardiaca_value)
 
 # st.write(dorDeCabeca, cardica)
 
@@ -130,7 +130,7 @@ dados = {
     'coriza': coriza,
     'dispneia': dispneia,
     'diabetes': diabetes,
-#     'cardiaca': cardiaca,
+    'cardiaca': cardiaca,
 }
 
 # dados = [faixaetaria, qntVacinas, dorDeGarganta, dorDeCabeca,
