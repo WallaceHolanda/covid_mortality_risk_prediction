@@ -26,7 +26,7 @@ def criarModelo(modelo, baseObitoCurado, alvo):
 def importarModelo(modeloEscolhido):
     url = 'streamlit/bases/oc-vacina-6040-sp.xlsx'
     alvo = 'evolucaoCaso'
-    baseObitoCurado = pd.read_excel(url)
+    baseObitoCurado = pd.read_excel(url, engine="openpyxl")
 
     atributosSelecionados = ['faixaetaria', 'dispneia', 'qntVacinas', 'dorDeGarganta',
                              'coriza', 'diabetes', 'dorDeCabeca', 'cardiaca', 'evolucaoCaso']
