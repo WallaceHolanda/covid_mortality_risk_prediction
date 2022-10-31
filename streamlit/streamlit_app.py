@@ -24,7 +24,7 @@ def criarModelo(modelo, baseObitoCurado, alvo):
 
 
 def importarModelo(modeloEscolhido):
-    url = 'bases/oc-vacina-6040-sp.xlsx'
+    url = 'streamlit/bases/oc-vacina-6040-sp.xlsx'
     alvo = 'evolucaoCaso'
     baseObitoCurado = pd.read_excel(url)
 
@@ -136,13 +136,13 @@ dados = {
 # dados = [faixaetaria, qntVacinas, dorDeGarganta, dorDeCabeca,
 #          coriza, dispneia, diabetes, cardiaca]
 
-if(os.path.exists('modeloOC.pk1')):
-    modelo = importarModelo(modeloSelecionado)
-    botao = st.button('Efetuar Predição')
-    if(botao):
-        # dadosFormatados = np.array([[dados]])
-        dadosFormatados = pd.DataFrame([dados])
-        resultado = modelo.predict_proba(dadosFormatados)
-        probAgravamento =  round(resultado[0][0] * 100, 3)
-        st.write('Probabilidade de Agravamento: ', probAgravamento, ' %')
-        # st.write('Dados: ', dadosFormatados)
+
+modelo = importarModelo(modeloSelecionado)
+botao = st.button('Efetuar Predição')
+if(botao):
+    # dadosFormatados = np.array([[dados]])
+    dadosFormatados = pd.DataFrame([dados])
+    resultado = modelo.predict_proba(dadosFormatados)
+    probAgravamento =  round(resultado[0][0] * 100, 3)
+    st.write('Probabilidade de Agravamento: ', probAgravamento, ' %')
+    # st.write('Dados: ', dadosFormatados)
