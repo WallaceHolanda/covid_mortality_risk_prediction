@@ -4,7 +4,6 @@ descricao_database.txt
 predict_covid_risk
 Heroku_Covid_Predict*
 docs*
-streamlit*
 .ipynb_checkpoints*
 database*
 notebook/Mossoro*
