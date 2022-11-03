@@ -29,7 +29,7 @@ def importarModelo(modeloEscolhido):
     baseObitoCurado = pd.read_excel(url, engine="openpyxl")
 
     atributosSelecionados = ['faixaetaria', 'dispneia', 'qntVacinas', 'dorDeGarganta',
-                             'coriza', 'obesidade', 'dorDeCabeca', 'dorNoCorpo', 'evolucaoCaso']
+                             'coriza', 'diabetes', 'dorDeCabeca', 'faixaDiasSintomas', 'evolucaoCaso']
 
     baseObitoCurado = baseObitoCurado.loc[:, atributosSelecionados]
 
@@ -83,6 +83,11 @@ faixaetaria_options = ['0-11 Anos', '12-17 Anos', '18-29 Anos', '30-44 Anos', '4
 faixaetaria_values = {'0-11 Anos': 0, '12-17 Anos': 1, '18-29 Anos': 2, '30-44 Anos': 3,
                       '45-59 Anos': 4, '60-74 Anos': 5, '75-89 Anos': 6, '> 90 Anos': 7}
 
+faixaDiasSintomas_options = ['até 3 dias', '4 e 6 dias', '7 e 9 dias', '10 e 12 dias',
+                        '13 e 15 dias', '16 e 18 dias', 'Mais de 18 dias']
+
+faixaDiasSintomas_values = {'até 3 dias': 0, '4 e 6 dias': 1, '7 e 9 dias': 2, '10 e 12 dias': 3,
+                        '13 e 15 dias': 4, '16 e 18 dias': 5, 'Mais de 18 dias': 6}
 
 st.header('Modelo de Predição do Risco de Mortalidade')
 st.subheader(
@@ -100,6 +105,10 @@ qntVacinas_value = st.radio(
     'Quantas doses da vacina você tomou?', options=vacinas_options)
 qntVacinas = vacinas_values.get(qntVacinas_value)
 
+faixaDiasSintomas_value = st.radio(
+    'Quantos dias se passaram desde o primeiro sintoma?', options=faixaDiasSintomas_options)
+faixaDiasSintomas = faixaDiasSintomas_values.get(faixaDiasSintomas_value)
+
 dorDeGarganta_value = st.radio(
     'Apresenta Dor de Garganta?', options=radio_options)
 dorDeGarganta = radio_values.get(dorDeGarganta_value)
@@ -116,10 +125,12 @@ coriza = radio_values.get(coriza_value)
 dispneia_value = st.radio('Apresenta Dificuldade para Respirar (Dispneia)?', options=radio_options)
 dispneia = radio_values.get(dispneia_value)
 
-obesidade_value = st.radio('Possui algum grau de Obesidade?', options=radio_options)
-obesidade = radio_values.get(obesidade_value)
+diabetes_value = st.radio('Possui Diabetes?', options=radio_options)
+diabetes = radio_values.get(diabetes_value)
 
 # st.write(dorDeCabeca, cardica)
+
+# faixaDiasSintomas, diabetes, 
 
 dados = {
     'faixaetaria': faixaetaria,
@@ -128,8 +139,8 @@ dados = {
     'dorDeCabeca': dorDeCabeca,
     'coriza': coriza,
     'dispneia': dispneia,
-    'obesidade': obesidade,
-    'dorNoCorpo': dorNoCorpo,
+    'diabetes': diabetes,
+    'faixaDiasSintomas': faixaDiasSintomas,
 }
 
 modelo = importarModelo(modeloSelecionado)
