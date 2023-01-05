@@ -29,6 +29,7 @@
 - [Scikit-Learn](https://scikit-learn.org/stable/)
 - [PyCaret](https://pycaret.org/)
 - [SHAP](https://github.com/slundberg/shap)
+- [Streamlit](https://streamlit.io/)
 
 
 # :computer: Como rodar
