@@ -17,6 +17,8 @@
   Desenvolvimento de dois modelos de agravamento do estado clínico com base na probabilidade de internação e mortalidade;
   
   Disponibilização dos modelos desenvolvidos.
+  - <a href="https://cutt.ly/5Myl2Rn" target="_blank">Predição da Mortalidade</a>
+  - <a href="https://cutt.ly/VMylJef" target="_blank">Predição da Internação</a>
 </p>
 
 
