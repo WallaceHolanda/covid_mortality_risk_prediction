@@ -1,5 +1,15 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from PIL import Image
+
+# Descrição do Trabalho
+descricao = """Este Modelo de Predição é resultado do trabalho de Dissertação do Programa de Pós-Graduação
+em Ciências da Computação realizado por Wallace Duarte de Holanda, com orientação do Prof. Dr. Lenardo Chaves 
+e Silva."""
+
+# Descrição de como Utilizar
+comoUsar = """Para realizar a Predição do Agravamento, inicialmente, escolha o Modelo de sua preferência, 
+e em seguida responda o conjunto de perguntas sobre o seu estado de saúde."""
 
 # Definindo os Valores das Opções
 radio_options = ['Sim', 'Não']
@@ -25,12 +35,22 @@ faixaDiasSintomas_values = {'até 3 dias': 0, '4 e 6 dias': 1, '7 e 9 dias': 2,
                             '10 e 12 dias': 3, '13 e 15 dias': 4, '16 e 18 dias': 5, 
                             'Mais de 18 dias': 6}
 
+# Exibir imagem do cabeçalho
+
+def imagemCabecalho():
+    col1, col2, col3 = st.columns([1,3,1])
+    with col2:
+        logomarcas = Image.open('../images/logos.png')
+        st.image(logomarcas, use_column_width = 'auto')
 
 # Cabeçalho da Página
 def cabecalhoPagina():
-    return components.html("""<h3 style="text-align: center; font-family: sans-serif; color: white">
-                           Programa de Pós-Graduação em Ciências da Computação - PPgCC
-                           </h3>""", height=100)
+    return components.html("""<h1 style="text-align: center; font-family: sans-serif; color: white">
+                           Predição do Risco de Mortalidade</h1>
+                           <p>""" + descricao +
+                           """</p>
+                           <hr size="5" width="90%" color="##BCF4BC">
+                           """, height=300)
     
 # Adiciona uma linha de separação
 def adicionarSeparador():
