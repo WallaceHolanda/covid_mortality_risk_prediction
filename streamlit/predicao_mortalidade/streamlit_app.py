@@ -24,10 +24,6 @@ modelo_values = {'Gradient Boosting': modeloGB,
 componentes.imagemCabecalho()   
 componentes.cabecalhoPagina()
 
-# st.header('Modelo de Predição do Risco de Mortalidade')
-# st.subheader(
-#     'Preencha as solicitadas solicitadas para obter a probabilidade do risco de agravamento:')
-
 # Campos do Formulário
 componentes.exibirPergunta('Escolha o Modelo a ser utilizado')
 modelo_value = st.selectbox('id_modelo', options=componentes.modelo_options, label_visibility='collapsed')
@@ -101,3 +97,6 @@ if(botao):
     probAgravamento =  round(resultado[0][0] * 100, 3)
     componentes.exibirPergunta('Probabilidade de Agravamento: ' + str(probAgravamento) + '%')
     # st.write('Dados: ', dadosFormatados)
+
+componentes.adicionarSeparador()
+componentes.exibirFooter()

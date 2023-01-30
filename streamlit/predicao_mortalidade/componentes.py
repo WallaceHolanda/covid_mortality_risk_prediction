@@ -4,8 +4,8 @@ from PIL import Image
 
 # Descrição do Trabalho
 descricao = """Este Modelo de Predição é resultado do trabalho de Dissertação do Programa de Pós-Graduação
-em Ciências da Computação realizado por Wallace Duarte de Holanda, com orientação do Prof. Dr. Lenardo Chaves 
-e Silva."""
+em Ciências da Computação (PPgCC) realizado por Wallace Duarte de Holanda, com orientação do Prof. 
+Dr. Lenardo Chaves e Silva."""
 
 # Descrição de como Utilizar
 comoUsar = """Para realizar a Predição do Agravamento, inicialmente, escolha o Modelo de sua preferência, 
@@ -36,9 +36,8 @@ faixaDiasSintomas_values = {'até 3 dias': 0, '4 e 6 dias': 1, '7 e 9 dias': 2,
                             'Mais de 18 dias': 6}
 
 # Exibir imagem do cabeçalho
-
 def imagemCabecalho():
-    col1, col2, col3 = st.columns([1,3,1])
+    col1, col2, col3 = st.columns([2,6,2])
     with col2:
         logomarcas = Image.open('../images/logos.png')
         st.image(logomarcas, use_column_width = 'auto')
@@ -47,8 +46,13 @@ def imagemCabecalho():
 def cabecalhoPagina():
     return components.html("""<h1 style="text-align: center; font-family: sans-serif; color: white">
                            Predição do Risco de Mortalidade</h1>
-                           <p>""" + descricao +
-                           """</p>
+                           <h4 style="font-weight: 500; text-align: justify; font-family: sans-serif; color: white; line-height: 1.45">""" 
+                           + descricao +
+                           """</h4>
+                           <h4 style="font-weight: 500; text-align: justify; font-family: sans-serif; color: white; line-height: 1.45">""" 
+                           + comoUsar +
+                           """</h4>
+                           <br>
                            <hr size="5" width="90%" color="##BCF4BC">
                            """, height=300)
     
@@ -59,4 +63,10 @@ def adicionarSeparador():
 # Exibir as Perguntas em h3
 def exibirPergunta(conteudo):
     return components.html(
-        """<h3 style="font-family: sans-serif; color: white">""" + conteudo + """</h3>""", height=40)
+        """<h3 style="text-align: left; font-family: sans-serif; color: white">""" + conteudo + """</h3>""", height=40)
+
+def exibirFooter():
+    return components.html(""" <footer style="text-align: center; font-family: sans-serif; color: white">
+                           Copyright © 2023 - 
+                           <a href="mailto:wallace.holanda@alunos.ufersa.edu.br" style="color: lightblue;">Contato</a>
+                           </footer>""")
