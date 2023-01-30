@@ -65,6 +65,12 @@ def exibirPergunta(conteudo):
     return components.html(
         """<h3 style="text-align: left; font-family: sans-serif; color: white">""" + conteudo + """</h3>""", height=40)
 
+def exibirProbabilidade(probabilidade):
+    return components.html("""<p style="font-family: sans-serif; color: white"> 
+                           A Probabilidade de Agravamento é de """
+                           """<strong>""" + probabilidade + """</strong>"""
+                           """% </p>""", height=30)
+
 def exibirFooter():
     return components.html(""" <footer style="text-align: center; font-family: sans-serif; color: white">
                            Copyright © 2023 - 

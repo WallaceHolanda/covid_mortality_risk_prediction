@@ -95,7 +95,7 @@ if(botao):
     dadosFormatados = pd.DataFrame([dados])
     resultado = modelo.predict_proba(dadosFormatados)
     probAgravamento =  round(resultado[0][0] * 100, 3)
-    componentes.exibirPergunta('Probabilidade de Agravamento: ' + str(probAgravamento) + '%')
+    componentes.exibirProbabilidade(str(probAgravamento))
     # st.write('Dados: ', dadosFormatados)
 
 componentes.adicionarSeparador()
