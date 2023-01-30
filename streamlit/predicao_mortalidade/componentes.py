@@ -2,14 +2,15 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 
-# Descrição do Trabalho
+# Textos Utilizados
+titulo = "Predição do Risco de Mortalidade"
 descricao = """Este Modelo de Predição é resultado do trabalho de Dissertação do Programa de Pós-Graduação
 em Ciências da Computação (PPgCC) realizado por Wallace Duarte de Holanda, com orientação do Prof. 
 Dr. Lenardo Chaves e Silva."""
-
-# Descrição de como Utilizar
-comoUsar = """Para realizar a Predição do Agravamento, inicialmente, escolha o Modelo de sua preferência, 
+comoUsar = """Para realizar a Predição da Mortalidade, inicialmente, escolha o Modelo de sua preferência, 
 e em seguida responda o conjunto de perguntas sobre o seu estado de saúde."""
+aProbabilidadeEh = "A Probabilidade de Mortalidade é de "
+copyright = "Copyright © 2023 - "
 
 # Definindo os Valores das Opções
 radio_options = ['Sim', 'Não']
@@ -45,7 +46,7 @@ def imagemCabecalho():
 # Cabeçalho da Página
 def cabecalhoPagina():
     return components.html("""<h1 style="text-align: center; font-family: sans-serif; color: white">
-                           Predição do Risco de Mortalidade</h1>
+                           """ + titulo + """</h1>
                            <h4 style="font-weight: 500; text-align: justify; font-family: sans-serif; color: white; line-height: 1.45">""" 
                            + descricao +
                            """</h4>
@@ -66,13 +67,12 @@ def exibirPergunta(conteudo):
         """<h3 style="text-align: left; font-family: sans-serif; color: white">""" + conteudo + """</h3>""", height=40)
 
 def exibirProbabilidade(probabilidade):
-    return components.html("""<p style="font-family: sans-serif; color: white"> 
-                           A Probabilidade de Agravamento é de """
+    return components.html("""<p style="font-family: sans-serif; color: white">"""+ aProbabilidadeEh +
                            """<strong>""" + probabilidade + """</strong>"""
                            """% </p>""", height=30)
 
 def exibirFooter():
     return components.html(""" <footer style="text-align: center; font-family: sans-serif; color: white">
-                           Copyright © 2023 - 
+                           """ + copyright + """
                            <a href="mailto:wallace.holanda@alunos.ufersa.edu.br" style="color: lightblue;">Contato</a>
                            </footer>""")
