@@ -21,7 +21,7 @@ def __criarModelo__(modelo, baseObitoCurado, alvo):
 
 # Carrega os dados da base, em seguida cria e retorna o modelo
 def importarModelo(modeloEscolhido):
-    url = 'bases/ba-oc-6040-sp.xlsx'
+    url = 'streamlit/predicao_mortalidade/bases/ba-oc-6040-sp.xlsx'
     alvo = 'evolucaoCaso'
     baseObitoCurado = pd.read_excel(url, engine="openpyxl")
 

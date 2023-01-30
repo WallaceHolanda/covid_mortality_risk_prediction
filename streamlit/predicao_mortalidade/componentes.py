@@ -39,7 +39,7 @@ faixaDiasSintomas_values = {'até 3 dias': 0, '4 e 6 dias': 1, '7 e 9 dias': 2,
 def imagemCabecalho():
     col1, col2, col3 = st.columns([2,6,2])
     with col2:
-        logomarcas = Image.open('../images/logos.png')
+        logomarcas = Image.open('streamlit/images/logos.png')
         st.image(logomarcas, use_column_width = 'auto')
 
 # Cabeçalho da Página
