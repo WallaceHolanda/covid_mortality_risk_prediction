@@ -7,20 +7,19 @@
 </p>
 
 
-# :computer: Objetivos do Projeto
+## :dart: Objectives
 
 <p>
-  Coleta, analise e organização dos dados de pacientes suspeitos de COVID-19 armazenados no <a href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2022">Open Data Sus</a>
-  
-  Avaliação do desempenho dos algoritmos de aprendizado de máquina em relação aos dados;
-  
-  Desenvolvimento de dois modelos de agravamento do estado clínico com base na probabilidade de internação e mortalidade;
-  
-  Disponibilização dos modelos de <a href="https://cutt.ly/5Myl2Rn" target="_blank">Predição da Mortalidade</a> e <a href="https://cutt.ly/VMylJef" target="_blank">Predição da Internação</a>.
+
+- Data Collection and Analysis from the <a href="https://opendatasus.saude.gov.br/dataset/notificacoes-de-sindrome-gripal-leve-2022">Open Data Sus</a> database
+
+- Machine Learning Algorithm Evaluation and Development of Clinical Worsening Models
+
+- Deployment of <a href="https://cutt.ly/5Myl2Rn" target="_blank">Mortality</a> and <a href="https://cutt.ly/VMylJef" target="_blank">Hospitalization</a> Prediction Models
 </p>
 
 
-# :rocket: Tecnologias
+## :computer: Technologies Used
 
 - [Github](https://github.com)
 - [Jupyter Notebook](https://jupyter.org/)
@@ -32,20 +31,26 @@
 - [Streamlit](https://streamlit.io/)
 
 
-# :computer: Como rodar
+## :hammer: How to run
 
 ```bash
-# Clone Repositorio
+# Clone the repository to your local machine
 $ git clone https://github.com/WallaceHolanda/covid_mortality_risk_prediction.git
+```
 
-# Executar o Projeto
+```bash
+# Install the required packages
+$ pip install -r requirements.txt
+
+```
+
+```bash
+# Run the code
 $ jupyter notebook
 
 ```
 
 
-# :page_facing_up: Licença
+## :page_facing_up: License
 
-Este projeto está sob a [MIT License](./LICENSE)
-
-Feito por Wallace Holanda
+By Wallace Holanda - [MIT License](./LICENSE)
