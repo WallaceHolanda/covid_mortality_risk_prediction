@@ -69,10 +69,10 @@ def exibirPergunta(conteudo):
 def exibirProbabilidade(probabilidade):
     return components.html("""<p style="font-family: sans-serif; color: white">"""+ aProbabilidadeEh +
                            """<strong>""" + probabilidade + """</strong>"""
-                           """% </p>""", height=30)
+                           """% </p>""", height=40)
 
 def exibirFooter():
     return components.html(""" <footer style="text-align: center; font-family: sans-serif; color: white">
                            """ + copyright + """
-                           <a href="mailto:wallace.holanda@alunos.ufersa.edu.br" style="color: lightblue;">Contato</a>
+                           <a href="mailto:wallace.holanda@alunos.ufersa.edu.br" style="color: lightblue;">Contact</a>
                            </footer>""")
