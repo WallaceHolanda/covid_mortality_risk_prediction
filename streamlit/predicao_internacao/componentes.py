@@ -3,38 +3,38 @@ import streamlit.components.v1 as components
 from PIL import Image
 
 # Textos Utilizados
-titulo = "Predição do Risco de Internação"
-descricao = """Este Modelo de Predição é resultado do trabalho de Dissertação do Programa de Pós-Graduação
-em Ciências da Computação (PPgCC) realizado por Wallace Duarte de Holanda, com orientação do Prof. 
-Dr. Lenardo Chaves e Silva."""
-comoUsar = """Para realizar a Predição da Internação, inicialmente, escolha o Modelo de sua preferência, 
-e em seguida responda o conjunto de perguntas sobre o seu estado de saúde."""
-aProbabilidadeEh = "A Probabilidade de Internação é de "
+titulo = "Risk of Hospitalization Prediction"
+descricao = """This Prediction Model is the result of the dissertation work of the Postgraduate Program
+in Computer Science (PPgCC) carried out by Wallace Duarte de Holanda, under the supervision of
+Prof. Dr. Lenardo Chaves e Silva."""
+comoUsar = """To make a Hospitalization Prediction, first choose your preferred Model and then answer
+the set of questions about your health status."""
+aProbabilidadeEh = "The probability of hospitalization is "
 copyright = "Copyright © 2023 - "
 
 # Definindo os Valores das Opções
-radio_options = ['Sim', 'Não']
-radio_values = {'Sim': 1, 'Não': 0}
+radio_options = ['Yes', 'No']
+radio_values = {'Yes': 1, 'No': 0}
 
-vacinas_options = ['Nenhuma', '1 Dose', '2 Doses']
-vacinas_values = {'Nenhuma': 0, '1 Dose': 1, '2 Doses': 2}
+vacinas_options = ['None', '1 Dose', '2 Doses']
+vacinas_values = {'None': 0, '1 Dose': 1, '2 Doses': 2}
 
 modelo_options = ['Gradient Boosting', 'Logistic Regression', 
                   'Random Forest', 'Ada Boost']
 
-faixaetaria_options = ['0-11 Anos', '12-17 Anos', '18-29 Anos', 
-                       '30-44 Anos', '45-59 Anos','60-74 Anos', 
-                       '75-89 Anos', '> 90 Anos']
-faixaetaria_values = {'0-11 Anos': 0, '12-17 Anos': 1, '18-29 Anos': 2, 
-                      '30-44 Anos': 3, '45-59 Anos': 4, '60-74 Anos': 5, 
-                      '75-89 Anos': 6, '> 90 Anos': 7}
+faixaetaria_options = ['0-11 years', '12-17 years', '18-29 years', 
+                       '30-44 years', '45-59 years','60-74 years', 
+                       '75-89 years', 'Over 90 years']
+faixaetaria_values = {'0-11 years': 0, '12-17 years': 1, '18-29 years': 2, 
+                      '30-44 years': 3, '45-59 years': 4, '60-74 years': 5, 
+                      '75-89 years': 6, 'Over 90 years': 7}
 
-faixaDiasSintomas_options = ['até 3 dias', '4 e 6 dias', '7 e 9 dias', 
-                             '10 e 12 dias', '13 e 15 dias', '16 e 18 dias', 
-                             'Mais de 18 dias']
-faixaDiasSintomas_values = {'até 3 dias': 0, '4 e 6 dias': 1, '7 e 9 dias': 2, 
-                            '10 e 12 dias': 3, '13 e 15 dias': 4, '16 e 18 dias': 5, 
-                            'Mais de 18 dias': 6}
+faixaDiasSintomas_options = ['up to 3 days', '4 to 6 days', '7 to 9 days', 
+                             '10 to 12 days', '13 to 15 days', '16 to 18 days', 
+                             'More than 18 days']
+faixaDiasSintomas_values = {'up to 3 days': 0, '4 to 6 days': 1, '7 to 9 days': 2, 
+                            '10 to 12 days': 3, '13 to 15 days': 4, '16 to 18 days': 5, 
+                            'More than 18 days': 6}
 
 # Exibir imagem do cabeçalho
 def imagemCabecalho():
