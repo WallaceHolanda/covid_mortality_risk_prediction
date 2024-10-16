@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
+import os
 
 # Textos Utilizados
 titulo = "Risk of Mortality Prediction"
@@ -10,7 +11,7 @@ Prof. Dr. Lenardo Chaves e Silva."""
 comoUsar = """To make a Mortality Prediction, first choose your preferred Model and then answer
 the set of questions about your health status."""
 aProbabilidadeEh = "The probability of mortality is "
-copyright = "Copyright © 2023 - "
+copyright = "Copyright © 2024 - "
 
 
 # Definindo os Valores das Opções
@@ -41,7 +42,9 @@ faixaDiasSintomas_values = {'up to 3 days': 0, '4 to 6 days': 1, '7 to 9 days': 
 def imagemCabecalho():
     col1, col2, col3 = st.columns([2,6,2])
     with col2:
-        logomarcas = Image.open('streamlit/images/logos.png')
+        diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+        caminho_imagem = os.path.join(diretorio_atual, 'images', 'logos.png')
+        logomarcas = Image.open(caminho_imagem)
         st.image(logomarcas, use_column_width = 'auto')
 
 # Cabeçalho da Página
