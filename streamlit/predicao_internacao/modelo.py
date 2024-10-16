@@ -7,6 +7,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 import sklearn
 import numpy as np
 import pandas as pd
+import os
 
 # Divide a base de dados e realiza o fit a partir do modelo especificado
 def __criarModelo__(modelo, baseObitoCurado, alvo):
@@ -20,17 +21,20 @@ def __criarModelo__(modelo, baseObitoCurado, alvo):
 
 # Carrega os dados da base, em seguida cria e retorna o modelo
 def importarModelo(modeloEscolhido):
-    url = 'streamlit/predicao_internacao/bases/ba-ic-7030-sp.xlsx'
     alvo = 'evolucaoCaso'
-    baseObitoCurado = pd.read_excel(url, engine="openpyxl")
+
+    caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bases', 'ba-ic-7030-sp.xlsx')
+    baseObitoCurado = pd.read_excel(caminho_arquivo, engine="openpyxl")
+
     atributosSelecionados = ['faixaetaria', 'qntVacinas', 'faixaDiasSintomas', 
                              'dorDeCabeca', 'dorDeGarganta', 'coriza', 
                              'dispneia', 'tosse', 'diabetes', 'renal', 'evolucaoCaso']
     baseObitoCurado = baseObitoCurado.loc[:, atributosSelecionados]
+    
     return __criarModelo__(modeloEscolhido, baseObitoCurado, alvo)
 
 def criaAdaBoost():
-    return AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None,
+    return AdaBoostClassifier(algorithm='SAMME.R', estimator=None,
                               learning_rate=1.0, n_estimators=50, random_state=410)
 
 def criaRandomForest():
@@ -49,7 +53,7 @@ def criaLogisticRegression():
     
 def criaGradientBoosting():    
     return GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
-                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
                            max_features=None, max_leaf_nodes=None,
                            min_impurity_decrease=0.0,
                            min_samples_leaf=1, min_samples_split=2,
