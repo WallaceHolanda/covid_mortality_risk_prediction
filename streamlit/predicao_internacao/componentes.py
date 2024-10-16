@@ -11,7 +11,7 @@ Prof. Dr. Lenardo Chaves e Silva."""
 comoUsar = """To make a Hospitalization Prediction, first choose your preferred Model and then answer
 the set of questions about your health status."""
 aProbabilidadeEh = "The probability of hospitalization is "
-copyright = "Copyright © 2023 - "
+copyright = "Copyright © 2024 - "
 
 # Definindo os Valores das Opções
 radio_options = ['Yes', 'No']
