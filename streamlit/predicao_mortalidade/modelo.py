@@ -30,9 +30,6 @@ def importarModelo(modeloEscolhido):
                              'coriza', 'diabetes', 'dorDeCabeca', 'faixaDiasSintomas', 'evolucaoCaso']
 
     baseObitoCurado = baseObitoCurado.loc[:, atributosSelecionados]
-
-    print('\n\nColunas: ', baseObitoCurado.columns)
-
     return __criarModelo__(modeloEscolhido, baseObitoCurado, alvo)
 
 # Retorna o Modelo AdaBoost
