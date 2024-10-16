@@ -76,15 +76,14 @@ diabetes = componentes.radio_values.get(diabetes_value)
 componentes.adicionarSeparador()
 
 # st.write(dorDeCabeca, cardica)
-# faixaDiasSintomas, diabetes, 
 dados = {
     'faixaetaria': faixaetaria,
+    'dispneia': dispneia,
     'qntVacinas': qntVacinas,
     'dorDeGarganta': dorDeGarganta,
-    'dorDeCabeca': dorDeCabeca,
     'coriza': coriza,
-    'dispneia': dispneia,
     'diabetes': diabetes,
+    'dorDeCabeca': dorDeCabeca,
     'faixaDiasSintomas': faixaDiasSintomas,
 }
 
